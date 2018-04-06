@@ -20,3 +20,6 @@ Require-Bundle: javax.inject;bundle-version="0.0.0",
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: oxley.dave.fun.sport.stepcounter
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: oxley.dave.fun.sport.stepcounter.api,
+ oxley.dave.fun.sport.stepcounter.impl,
+ oxley.dave.fun.sport.stepcounter.util

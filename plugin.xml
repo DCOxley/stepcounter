@@ -6,7 +6,7 @@
       <!-- @generated stepcounter -->
       <package
             uri="oxley.dave.fun.sport"
-            class="stepcounter.StepcounterPackage"
+            class="oxley.dave.fun.sport.stepcounter.StepcounterPackage"
             genModel="model/stepcounter.genmodel"/>
    </extension>
 

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="stepcounter" nsURI="oxley.dave.fun.sport" nsPrefix="oxley.dave.fun.sport.src">
-  <eClassifiers xsi:type="ecore:EClass" name="Day"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Cycle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Target"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StepTarget"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SportTarget"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Day">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="status" eType="#//Status"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Date" instanceClassName="java.util.Date"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Cycle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="days" upperBound="-1" eType="#//Day"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Target" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StepTarget" eSuperTypes="#//Target"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SportTarget" eSuperTypes="#//Target"/>
   <eClassifiers xsi:type="ecore:EClass" name="Status"/>
   <eClassifiers xsi:type="ecore:EClass" name="Punishment"/>
   <eClassifiers xsi:type="ecore:EClass" name="Reward"/>
