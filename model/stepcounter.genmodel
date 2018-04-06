@@ -5,7 +5,8 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>stepcounter.ecore</foreignModel>
-  <genPackages prefix="Stepcounter" disposableProviderFactory="true" ecorePackage="stepcounter.ecore#/">
+  <genPackages prefix="Stepcounter" basePackage="oxley.dave.fun.sport.stepcounter"
+      disposableProviderFactory="true" interfacePackageSuffix="api" ecorePackage="stepcounter.ecore#/">
     <genClasses ecoreClass="stepcounter.ecore#//Day"/>
     <genClasses ecoreClass="stepcounter.ecore#//Cycle"/>
     <genClasses ecoreClass="stepcounter.ecore#//Target"/>
