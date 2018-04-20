@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="stepcounter" nsURI="oxley.dave.fun.sport" nsPrefix="oxley.dave.fun.sport.src">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="stepcounter.model" nsURI="oxley.dave.fun.sport" nsPrefix="oxley.dave.fun.sport.src">
   <eClassifiers xsi:type="ecore:EClass" name="Day">
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Target"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="status" eType="#//Status"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="result" eType="#//Result"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="Date" instanceClassName="java.util.Date"/>
   <eClassifiers xsi:type="ecore:EClass" name="Cycle">
@@ -15,4 +16,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Status"/>
   <eClassifiers xsi:type="ecore:EClass" name="Punishment"/>
   <eClassifiers xsi:type="ecore:EClass" name="Reward"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Result">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSteps" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
 </ecore:EPackage>

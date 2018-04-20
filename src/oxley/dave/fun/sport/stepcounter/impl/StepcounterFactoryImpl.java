@@ -2,7 +2,9 @@
  */
 package oxley.dave.fun.sport.stepcounter.impl;
 
+import java.util.Date;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -61,14 +63,44 @@ public class StepcounterFactoryImpl extends EFactoryImpl implements StepcounterF
 		switch (eClass.getClassifierID()) {
 			case StepcounterPackage.DAY: return createDay();
 			case StepcounterPackage.CYCLE: return createCycle();
-			case StepcounterPackage.TARGET: return createTarget();
 			case StepcounterPackage.STEP_TARGET: return createStepTarget();
 			case StepcounterPackage.SPORT_TARGET: return createSportTarget();
 			case StepcounterPackage.STATUS: return createStatus();
 			case StepcounterPackage.PUNISHMENT: return createPunishment();
 			case StepcounterPackage.REWARD: return createReward();
+			case StepcounterPackage.RESULT: return createResult();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case StepcounterPackage.DATE:
+				return createDateFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case StepcounterPackage.DATE:
+				return convertDateToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -90,16 +122,6 @@ public class StepcounterFactoryImpl extends EFactoryImpl implements StepcounterF
 	public Cycle createCycle() {
 		CycleImpl cycle = new CycleImpl();
 		return cycle;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Target createTarget() {
-		TargetImpl target = new TargetImpl();
-		return target;
 	}
 
 	/**
@@ -150,6 +172,34 @@ public class StepcounterFactoryImpl extends EFactoryImpl implements StepcounterF
 	public Reward createReward() {
 		RewardImpl reward = new RewardImpl();
 		return reward;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Result createResult() {
+		ResultImpl result = new ResultImpl();
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date createDateFromString(EDataType eDataType, String initialValue) {
+		return (Date)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertDateToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

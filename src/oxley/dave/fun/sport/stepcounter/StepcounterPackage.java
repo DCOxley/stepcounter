@@ -2,8 +2,11 @@
  */
 package oxley.dave.fun.sport.stepcounter;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -65,13 +68,40 @@ public interface StepcounterPackage extends EPackage {
 	int DAY = 0;
 
 	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DAY__TARGET = 0;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DAY__STATUS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DAY__RESULT = 2;
+
+	/**
 	 * The number of structural features of the '<em>Day</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DAY_FEATURE_COUNT = 0;
+	int DAY_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Day</em>' class.
@@ -93,13 +123,22 @@ public interface StepcounterPackage extends EPackage {
 	int CYCLE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Days</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYCLE__DAYS = 0;
+
+	/**
 	 * The number of structural features of the '<em>Cycle</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CYCLE_FEATURE_COUNT = 0;
+	int CYCLE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Cycle</em>' class.
@@ -155,7 +194,7 @@ public interface StepcounterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STEP_TARGET_FEATURE_COUNT = 0;
+	int STEP_TARGET_FEATURE_COUNT = TARGET_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Step Target</em>' class.
@@ -164,7 +203,7 @@ public interface StepcounterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STEP_TARGET_OPERATION_COUNT = 0;
+	int STEP_TARGET_OPERATION_COUNT = TARGET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link oxley.dave.fun.sport.stepcounter.impl.SportTargetImpl <em>Sport Target</em>}' class.
@@ -183,7 +222,7 @@ public interface StepcounterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPORT_TARGET_FEATURE_COUNT = 0;
+	int SPORT_TARGET_FEATURE_COUNT = TARGET_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Sport Target</em>' class.
@@ -192,7 +231,7 @@ public interface StepcounterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPORT_TARGET_OPERATION_COUNT = 0;
+	int SPORT_TARGET_OPERATION_COUNT = TARGET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link oxley.dave.fun.sport.stepcounter.impl.StatusImpl <em>Status</em>}' class.
@@ -280,6 +319,54 @@ public interface StepcounterPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link oxley.dave.fun.sport.stepcounter.impl.ResultImpl <em>Result</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see oxley.dave.fun.sport.stepcounter.impl.ResultImpl
+	 * @see oxley.dave.fun.sport.stepcounter.impl.StepcounterPackageImpl#getResult()
+	 * @generated
+	 */
+	int RESULT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Number Of Steps</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT__NUMBER_OF_STEPS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '<em>Date</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.Date
+	 * @see oxley.dave.fun.sport.stepcounter.impl.StepcounterPackageImpl#getDate()
+	 * @generated
+	 */
+	int DATE = 9;
+
+
+	/**
 	 * Returns the meta object for class '{@link oxley.dave.fun.sport.stepcounter.api.Day <em>Day</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -290,6 +377,39 @@ public interface StepcounterPackage extends EPackage {
 	EClass getDay();
 
 	/**
+	 * Returns the meta object for the reference '{@link oxley.dave.fun.sport.stepcounter.api.Day#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see oxley.dave.fun.sport.stepcounter.api.Day#getTarget()
+	 * @see #getDay()
+	 * @generated
+	 */
+	EReference getDay_Target();
+
+	/**
+	 * Returns the meta object for the reference '{@link oxley.dave.fun.sport.stepcounter.api.Day#getStatus <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Status</em>'.
+	 * @see oxley.dave.fun.sport.stepcounter.api.Day#getStatus()
+	 * @see #getDay()
+	 * @generated
+	 */
+	EReference getDay_Status();
+
+	/**
+	 * Returns the meta object for the reference '{@link oxley.dave.fun.sport.stepcounter.api.Day#getResult <em>Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Result</em>'.
+	 * @see oxley.dave.fun.sport.stepcounter.api.Day#getResult()
+	 * @see #getDay()
+	 * @generated
+	 */
+	EReference getDay_Result();
+
+	/**
 	 * Returns the meta object for class '{@link oxley.dave.fun.sport.stepcounter.api.Cycle <em>Cycle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -298,6 +418,17 @@ public interface StepcounterPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCycle();
+
+	/**
+	 * Returns the meta object for the reference list '{@link oxley.dave.fun.sport.stepcounter.api.Cycle#getDays <em>Days</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Days</em>'.
+	 * @see oxley.dave.fun.sport.stepcounter.api.Cycle#getDays()
+	 * @see #getCycle()
+	 * @generated
+	 */
+	EReference getCycle_Days();
 
 	/**
 	 * Returns the meta object for class '{@link oxley.dave.fun.sport.stepcounter.api.Target <em>Target</em>}'.
@@ -360,6 +491,38 @@ public interface StepcounterPackage extends EPackage {
 	EClass getReward();
 
 	/**
+	 * Returns the meta object for class '{@link oxley.dave.fun.sport.stepcounter.api.Result <em>Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Result</em>'.
+	 * @see oxley.dave.fun.sport.stepcounter.api.Result
+	 * @generated
+	 */
+	EClass getResult();
+
+	/**
+	 * Returns the meta object for the attribute '{@link oxley.dave.fun.sport.stepcounter.api.Result#getNumberOfSteps <em>Number Of Steps</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Steps</em>'.
+	 * @see oxley.dave.fun.sport.stepcounter.api.Result#getNumberOfSteps()
+	 * @see #getResult()
+	 * @generated
+	 */
+	EAttribute getResult_NumberOfSteps();
+
+	/**
+	 * Returns the meta object for data type '{@link java.util.Date <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Date</em>'.
+	 * @see java.util.Date
+	 * @model instanceClass="java.util.Date"
+	 * @generated
+	 */
+	EDataType getDate();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -393,6 +556,30 @@ public interface StepcounterPackage extends EPackage {
 		EClass DAY = eINSTANCE.getDay();
 
 		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DAY__TARGET = eINSTANCE.getDay_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Status</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DAY__STATUS = eINSTANCE.getDay_Status();
+
+		/**
+		 * The meta object literal for the '<em><b>Result</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DAY__RESULT = eINSTANCE.getDay_Result();
+
+		/**
 		 * The meta object literal for the '{@link oxley.dave.fun.sport.stepcounter.impl.CycleImpl <em>Cycle</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -401,6 +588,14 @@ public interface StepcounterPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CYCLE = eINSTANCE.getCycle();
+
+		/**
+		 * The meta object literal for the '<em><b>Days</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CYCLE__DAYS = eINSTANCE.getCycle_Days();
 
 		/**
 		 * The meta object literal for the '{@link oxley.dave.fun.sport.stepcounter.impl.TargetImpl <em>Target</em>}' class.
@@ -461,6 +656,34 @@ public interface StepcounterPackage extends EPackage {
 		 * @generated
 		 */
 		EClass REWARD = eINSTANCE.getReward();
+
+		/**
+		 * The meta object literal for the '{@link oxley.dave.fun.sport.stepcounter.impl.ResultImpl <em>Result</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see oxley.dave.fun.sport.stepcounter.impl.ResultImpl
+		 * @see oxley.dave.fun.sport.stepcounter.impl.StepcounterPackageImpl#getResult()
+		 * @generated
+		 */
+		EClass RESULT = eINSTANCE.getResult();
+
+		/**
+		 * The meta object literal for the '<em><b>Number Of Steps</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESULT__NUMBER_OF_STEPS = eINSTANCE.getResult_NumberOfSteps();
+
+		/**
+		 * The meta object literal for the '<em>Date</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.Date
+		 * @see oxley.dave.fun.sport.stepcounter.impl.StepcounterPackageImpl#getDate()
+		 * @generated
+		 */
+		EDataType DATE = eINSTANCE.getDate();
 
 	}
 

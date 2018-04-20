@@ -17,7 +17,7 @@ import oxley.dave.fun.sport.stepcounter.api.Target;
  *
  * @generated
  */
-public class TargetImpl extends MinimalEObjectImpl.Container implements Target {
+public abstract class TargetImpl extends MinimalEObjectImpl.Container implements Target {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

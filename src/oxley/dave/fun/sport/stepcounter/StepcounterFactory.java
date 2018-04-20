@@ -7,11 +7,11 @@ import org.eclipse.emf.ecore.EFactory;
 import oxley.dave.fun.sport.stepcounter.api.Cycle;
 import oxley.dave.fun.sport.stepcounter.api.Day;
 import oxley.dave.fun.sport.stepcounter.api.Punishment;
+import oxley.dave.fun.sport.stepcounter.api.Result;
 import oxley.dave.fun.sport.stepcounter.api.Reward;
 import oxley.dave.fun.sport.stepcounter.api.SportTarget;
 import oxley.dave.fun.sport.stepcounter.api.Status;
 import oxley.dave.fun.sport.stepcounter.api.StepTarget;
-import oxley.dave.fun.sport.stepcounter.api.Target;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,15 +47,6 @@ public interface StepcounterFactory extends EFactory {
 	 * @generated
 	 */
 	Cycle createCycle();
-
-	/**
-	 * Returns a new object of class '<em>Target</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Target</em>'.
-	 * @generated
-	 */
-	Target createTarget();
 
 	/**
 	 * Returns a new object of class '<em>Step Target</em>'.
@@ -101,6 +92,15 @@ public interface StepcounterFactory extends EFactory {
 	 * @generated
 	 */
 	Reward createReward();
+
+	/**
+	 * Returns a new object of class '<em>Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Result</em>'.
+	 * @generated
+	 */
+	Result createResult();
 
 	/**
 	 * Returns the package supported by this factory.

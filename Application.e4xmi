@@ -3,13 +3,13 @@
   <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.window.main" label="Eclipse 4 RCP Application" width="500" height="400">
     <children xsi:type="basic:PartSashContainer" xmi:id="_6wlLksgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.partsashcontainer.sample">
       <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.partstack.sample">
-        <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.part.sample" contributionURI="bundleclass://oxley.dave.fun.sport.stepcounter/oxley.dave.fun.sport.stepcounter.parts.SamplePart" label="Sample Part"/>
+        <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.part.sample" contributionURI="bundleclass://oxley.dave.fun.sport.stepcounter.model/oxley.dave.fun.sport.stepcounter.parts.SamplePart" label="Sample Part"/>
       </children>
     </children>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_6wlLisgZEeSyMNYR5xypkQ" elementId="file" label="File">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLi8gZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handleditem.file.open" label="Open" iconURI="platform:/plugin/oxley.dave.fun.sport.stepcounter/icons/sample.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjMgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handleditem.save" label="Save" iconURI="platform:/plugin/oxley.dave.fun.sport.stepcounter/icons/save_edit.png" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLi8gZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handleditem.file.open" label="Open" iconURI="platform:/plugin/oxley.dave.fun.sport.stepcounter.model/icons/sample.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjMgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handleditem.save" label="Save" iconURI="platform:/plugin/oxley.dave.fun.sport.stepcounter.model/icons/save_edit.png" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjcgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handleditem.quit" label="Quit" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
       </children>
       <children xsi:type="menu:Menu" xmi:id="_6wlLjsgZEeSyMNYR5xypkQ" elementId="help" label="Help">
@@ -18,15 +18,15 @@
     </mainMenu>
     <trimBars xmi:id="_6wlLlcgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.trimbar.top">
       <children xsi:type="menu:ToolBar" xmi:id="_6wlLlsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.toolbar">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLl8gZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handleditem.trimbar.top.open" iconURI="platform:/plugin/oxley.dave.fun.sport.stepcounter/icons/sample.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLmMgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handleditem.trimbar.top.save" iconURI="platform:/plugin/oxley.dave.fun.sport.stepcounter/icons/save_edit.png" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLl8gZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handleditem.trimbar.top.open" iconURI="platform:/plugin/oxley.dave.fun.sport.stepcounter.model/icons/sample.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLmMgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handleditem.trimbar.top.save" iconURI="platform:/plugin/oxley.dave.fun.sport.stepcounter.model/icons/save_edit.png" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
       </children>
     </trimBars>
   </children>
-  <handlers xmi:id="_6wlLfcgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handler.quitCommand" contributionURI="bundleclass://oxley.dave.fun.sport.stepcounter/oxley.dave.fun.sport.stepcounter.handlers.QuitHandler" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
-  <handlers xmi:id="_6wlLgcgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handler.openCommand" contributionURI="bundleclass://oxley.dave.fun.sport.stepcounter/oxley.dave.fun.sport.stepcounter.handlers.OpenHandler" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
-  <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handler.saveCommand" contributionURI="bundleclass://oxley.dave.fun.sport.stepcounter/oxley.dave.fun.sport.stepcounter.handlers.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
-  <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handler.aboutCommand" contributionURI="bundleclass://oxley.dave.fun.sport.stepcounter/oxley.dave.fun.sport.stepcounter.handlers.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLfcgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handler.quitCommand" contributionURI="bundleclass://oxley.dave.fun.sport.stepcounter.model/oxley.dave.fun.sport.stepcounter.handlers.QuitHandler" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLgcgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handler.openCommand" contributionURI="bundleclass://oxley.dave.fun.sport.stepcounter.model/oxley.dave.fun.sport.stepcounter.handlers.OpenHandler" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handler.saveCommand" contributionURI="bundleclass://oxley.dave.fun.sport.stepcounter.model/oxley.dave.fun.sport.stepcounter.handlers.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.handler.aboutCommand" contributionURI="bundleclass://oxley.dave.fun.sport.stepcounter.model/oxley.dave.fun.sport.stepcounter.handlers.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
   <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
     <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
     <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="oxley.dave.fun.sport.stepcounter.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>

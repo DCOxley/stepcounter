@@ -2,8 +2,6 @@
  */
 package oxley.dave.fun.sport.stepcounter.api;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Sport Target</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface SportTarget extends EObject {
+public interface SportTarget extends Target {
 } // SportTarget

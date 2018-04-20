@@ -1,6 +1,8 @@
 package oxley.dave.fun.sport.stepcounter.parts;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -45,6 +47,12 @@ public class SamplePart {
 		tableViewer.setContentProvider(ArrayContentProvider.getInstance());;
 		tableViewer.setInput(createInitialDataModel());
 		tableViewer.getTable().setLayoutData(new GridData(GridData.FILL_BOTH));
+		System.out.println("Hello World");
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(Calendar.HOUR_OF_DAY, 0);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+		System.out.println(sdf.format(calendar.getTime()));
+		//System.out.println("Today is "+);
 	}
 
 	@Focus

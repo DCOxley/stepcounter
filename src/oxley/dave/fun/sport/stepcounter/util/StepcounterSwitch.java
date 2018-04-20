@@ -89,12 +89,14 @@ public class StepcounterSwitch<T> extends Switch<T> {
 			case StepcounterPackage.STEP_TARGET: {
 				StepTarget stepTarget = (StepTarget)theEObject;
 				T result = caseStepTarget(stepTarget);
+				if (result == null) result = caseTarget(stepTarget);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case StepcounterPackage.SPORT_TARGET: {
 				SportTarget sportTarget = (SportTarget)theEObject;
 				T result = caseSportTarget(sportTarget);
+				if (result == null) result = caseTarget(sportTarget);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -115,6 +117,12 @@ public class StepcounterSwitch<T> extends Switch<T> {
 				T result = caseReward(reward);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
+			}
+			case StepcounterPackage.RESULT: {
+				Result result = (Result)theEObject;
+				T theResult = caseResult(result);
+				if (theResult == null) theResult = defaultCase(theEObject);
+				return theResult;
 			}
 			default: return defaultCase(theEObject);
 		}
@@ -237,6 +245,21 @@ public class StepcounterSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseReward(Reward object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Result</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResult(Result object) {
 		return null;
 	}
 

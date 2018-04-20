@@ -3,9 +3,6 @@
 package oxley.dave.fun.sport.stepcounter.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import oxley.dave.fun.sport.stepcounter.StepcounterPackage;
 
 import oxley.dave.fun.sport.stepcounter.api.SportTarget;
@@ -17,7 +14,7 @@ import oxley.dave.fun.sport.stepcounter.api.SportTarget;
  *
  * @generated
  */
-public class SportTargetImpl extends MinimalEObjectImpl.Container implements SportTarget {
+public class SportTargetImpl extends TargetImpl implements SportTarget {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -9,5 +9,13 @@
             class="oxley.dave.fun.sport.stepcounter.StepcounterPackage"
             genModel="model/stepcounter.genmodel"/>
    </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.e4.ui.workbench.swt.E4Application"
+            name="oxley.dave.fun.sport.stepcounter">
+      </product>
+   </extension>
 
 </plugin>

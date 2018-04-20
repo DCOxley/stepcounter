@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see oxley.dave.fun.sport.stepcounter.StepcounterPackage#getTarget()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Target extends EObject {
