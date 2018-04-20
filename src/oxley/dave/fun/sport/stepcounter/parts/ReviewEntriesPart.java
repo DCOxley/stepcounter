@@ -24,6 +24,9 @@ public class ReviewEntriesPart {
 		calendar.addSelectionListener(widgetSelectedAdapter(e -> System.out.println("calendar date changed")));
 		
 		calendar.setBackground(Display.getDefault().getSystemColor(SWT.COLOR_BLUE));
+		
+        ColoredCalendar cd = new ColoredCalendar(parent);
+        cd.open(parent);
 	}
 
 }
