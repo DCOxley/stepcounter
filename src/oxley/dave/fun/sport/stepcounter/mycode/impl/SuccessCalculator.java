@@ -2,14 +2,14 @@ package oxley.dave.fun.sport.stepcounter.mycode.impl;
 
 import java.util.List;
 
-import oxley.dave.fun.sport.stepcounter.impl.DayImpl;
+import oxley.dave.fun.sport.stepcounter.api.Day;
 
 public class SuccessCalculator {
 
-	private List<DayImpl> days;
+	private List<Day> days;
 	private boolean wasSuccesful;
 
-	public SuccessCalculator(List<DayImpl> days, boolean wasSuccesful) {
+	public SuccessCalculator(List<Day> days, boolean wasSuccesful) {
 		super();
 		this.days = days;
 		this.wasSuccesful = wasSuccesful;

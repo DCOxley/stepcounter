@@ -3,7 +3,6 @@
 package oxley.dave.fun.sport.stepcounter.api;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Cycle extends EObject {
+public interface Cycle extends Period {
 
 	/**
 	 * Returns the value of the '<em><b>Days</b></em>' reference list.

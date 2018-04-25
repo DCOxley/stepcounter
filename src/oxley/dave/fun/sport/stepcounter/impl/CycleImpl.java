@@ -5,9 +5,6 @@ package oxley.dave.fun.sport.stepcounter.impl;
 import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import oxley.dave.fun.sport.stepcounter.StepcounterPackage;
 
@@ -27,7 +24,7 @@ import oxley.dave.fun.sport.stepcounter.api.Day;
  *
  * @generated
  */
-public class CycleImpl extends MinimalEObjectImpl.Container implements Cycle {
+public class CycleImpl extends PeriodImpl implements Cycle {
 	/**
 	 * The cached value of the '{@link #getDays() <em>Days</em>}' reference list.
 	 * <!-- begin-user-doc -->

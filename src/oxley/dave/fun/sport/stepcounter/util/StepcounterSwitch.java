@@ -71,12 +71,14 @@ public class StepcounterSwitch<T> extends Switch<T> {
 			case StepcounterPackage.DAY: {
 				Day day = (Day)theEObject;
 				T result = caseDay(day);
+				if (result == null) result = casePeriod(day);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case StepcounterPackage.CYCLE: {
 				Cycle cycle = (Cycle)theEObject;
 				T result = caseCycle(cycle);
+				if (result == null) result = casePeriod(cycle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -123,6 +125,12 @@ public class StepcounterSwitch<T> extends Switch<T> {
 				T theResult = caseResult(result);
 				if (theResult == null) theResult = defaultCase(theEObject);
 				return theResult;
+			}
+			case StepcounterPackage.PERIOD: {
+				Period period = (Period)theEObject;
+				T result = casePeriod(period);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
@@ -260,6 +268,21 @@ public class StepcounterSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseResult(Result object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Period</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Period</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePeriod(Period object) {
 		return null;
 	}
 

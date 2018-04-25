@@ -16,6 +16,7 @@ import oxley.dave.fun.sport.stepcounter.StepcounterPackage;
 
 import oxley.dave.fun.sport.stepcounter.api.Cycle;
 import oxley.dave.fun.sport.stepcounter.api.Day;
+import oxley.dave.fun.sport.stepcounter.api.Period;
 import oxley.dave.fun.sport.stepcounter.api.Punishment;
 import oxley.dave.fun.sport.stepcounter.api.Result;
 import oxley.dave.fun.sport.stepcounter.api.Reward;
@@ -93,6 +94,13 @@ public class StepcounterPackageImpl extends EPackageImpl implements StepcounterP
 	 * @generated
 	 */
 	private EClass resultEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass periodEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,17 +193,8 @@ public class StepcounterPackageImpl extends EPackageImpl implements StepcounterP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDay_Status() {
-		return (EReference)dayEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDay_Result() {
-		return (EReference)dayEClass.getEStructuralFeatures().get(2);
+		return (EReference)dayEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -293,6 +292,24 @@ public class StepcounterPackageImpl extends EPackageImpl implements StepcounterP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPeriod() {
+		return periodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPeriod_Status() {
+		return (EReference)periodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getDate() {
 		return dateEDataType;
 	}
@@ -327,7 +344,6 @@ public class StepcounterPackageImpl extends EPackageImpl implements StepcounterP
 		// Create classes and their features
 		dayEClass = createEClass(DAY);
 		createEReference(dayEClass, DAY__TARGET);
-		createEReference(dayEClass, DAY__STATUS);
 		createEReference(dayEClass, DAY__RESULT);
 
 		cycleEClass = createEClass(CYCLE);
@@ -347,6 +363,9 @@ public class StepcounterPackageImpl extends EPackageImpl implements StepcounterP
 
 		resultEClass = createEClass(RESULT);
 		createEAttribute(resultEClass, RESULT__NUMBER_OF_STEPS);
+
+		periodEClass = createEClass(PERIOD);
+		createEReference(periodEClass, PERIOD__STATUS);
 
 		// Create data types
 		dateEDataType = createEDataType(DATE);
@@ -380,13 +399,14 @@ public class StepcounterPackageImpl extends EPackageImpl implements StepcounterP
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		dayEClass.getESuperTypes().add(this.getPeriod());
+		cycleEClass.getESuperTypes().add(this.getPeriod());
 		stepTargetEClass.getESuperTypes().add(this.getTarget());
 		sportTargetEClass.getESuperTypes().add(this.getTarget());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(dayEClass, Day.class, "Day", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDay_Target(), this.getTarget(), null, "target", null, 0, 1, Day.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDay_Status(), this.getStatus(), null, "status", null, 0, 1, Day.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDay_Result(), this.getResult(), null, "result", null, 0, 1, Day.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cycleEClass, Cycle.class, "Cycle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -406,6 +426,9 @@ public class StepcounterPackageImpl extends EPackageImpl implements StepcounterP
 
 		initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResult_NumberOfSteps(), ecorePackage.getEInt(), "numberOfSteps", null, 0, 1, Result.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(periodEClass, Period.class, "Period", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPeriod_Status(), this.getStatus(), null, "status", null, 0, 1, Period.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(dateEDataType, Date.class, "Date", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

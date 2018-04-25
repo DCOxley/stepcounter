@@ -7,13 +7,10 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import oxley.dave.fun.sport.stepcounter.StepcounterPackage;
 
 import oxley.dave.fun.sport.stepcounter.api.Day;
 import oxley.dave.fun.sport.stepcounter.api.Result;
-import oxley.dave.fun.sport.stepcounter.api.Status;
 import oxley.dave.fun.sport.stepcounter.api.Target;
 
 /**
@@ -25,13 +22,12 @@ import oxley.dave.fun.sport.stepcounter.api.Target;
  * </p>
  * <ul>
  *   <li>{@link oxley.dave.fun.sport.stepcounter.impl.DayImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link oxley.dave.fun.sport.stepcounter.impl.DayImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link oxley.dave.fun.sport.stepcounter.impl.DayImpl#getResult <em>Result</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DayImpl extends MinimalEObjectImpl.Container implements Day {
+public class DayImpl extends PeriodImpl implements Day {
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -41,15 +37,6 @@ public class DayImpl extends MinimalEObjectImpl.Container implements Day {
 	 * @ordered
 	 */
 	protected Target target;
-	/**
-	 * The cached value of the '{@link #getStatus() <em>Status</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStatus()
-	 * @generated
-	 * @ordered
-	 */
-	protected Status status;
 	/**
 	 * The cached value of the '{@link #getResult() <em>Result</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -122,44 +109,6 @@ public class DayImpl extends MinimalEObjectImpl.Container implements Day {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Status getStatus() {
-		if (status != null && status.eIsProxy()) {
-			InternalEObject oldStatus = (InternalEObject)status;
-			status = (Status)eResolveProxy(oldStatus);
-			if (status != oldStatus) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepcounterPackage.DAY__STATUS, oldStatus, status));
-			}
-		}
-		return status;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Status basicGetStatus() {
-		return status;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStatus(Status newStatus) {
-		Status oldStatus = status;
-		status = newStatus;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StepcounterPackage.DAY__STATUS, oldStatus, status));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Result getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject)result;
@@ -204,9 +153,6 @@ public class DayImpl extends MinimalEObjectImpl.Container implements Day {
 			case StepcounterPackage.DAY__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
-			case StepcounterPackage.DAY__STATUS:
-				if (resolve) return getStatus();
-				return basicGetStatus();
 			case StepcounterPackage.DAY__RESULT:
 				if (resolve) return getResult();
 				return basicGetResult();
@@ -224,9 +170,6 @@ public class DayImpl extends MinimalEObjectImpl.Container implements Day {
 		switch (featureID) {
 			case StepcounterPackage.DAY__TARGET:
 				setTarget((Target)newValue);
-				return;
-			case StepcounterPackage.DAY__STATUS:
-				setStatus((Status)newValue);
 				return;
 			case StepcounterPackage.DAY__RESULT:
 				setResult((Result)newValue);
@@ -246,9 +189,6 @@ public class DayImpl extends MinimalEObjectImpl.Container implements Day {
 			case StepcounterPackage.DAY__TARGET:
 				setTarget((Target)null);
 				return;
-			case StepcounterPackage.DAY__STATUS:
-				setStatus((Status)null);
-				return;
 			case StepcounterPackage.DAY__RESULT:
 				setResult((Result)null);
 				return;
@@ -266,8 +206,6 @@ public class DayImpl extends MinimalEObjectImpl.Container implements Day {
 		switch (featureID) {
 			case StepcounterPackage.DAY__TARGET:
 				return target != null;
-			case StepcounterPackage.DAY__STATUS:
-				return status != null;
 			case StepcounterPackage.DAY__RESULT:
 				return result != null;
 		}

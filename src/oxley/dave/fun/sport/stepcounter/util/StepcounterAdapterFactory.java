@@ -106,6 +106,10 @@ public class StepcounterAdapterFactory extends AdapterFactoryImpl {
 				return createResultAdapter();
 			}
 			@Override
+			public Adapter casePeriod(Period object) {
+				return createPeriodAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -248,6 +252,20 @@ public class StepcounterAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResultAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link oxley.dave.fun.sport.stepcounter.api.Period <em>Period</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see oxley.dave.fun.sport.stepcounter.api.Period
+	 * @generated
+	 */
+	public Adapter createPeriodAdapter() {
 		return null;
 	}
 
