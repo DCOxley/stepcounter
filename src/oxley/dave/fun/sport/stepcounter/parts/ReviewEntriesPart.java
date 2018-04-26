@@ -25,6 +25,7 @@ public class ReviewEntriesPart {
 		
         ColoredCalendar cd = new ColoredCalendar(parent);
         cd.open(parent);
+        xx
 	}
 
 }
