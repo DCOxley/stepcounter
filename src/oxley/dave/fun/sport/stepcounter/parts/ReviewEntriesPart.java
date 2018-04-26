@@ -1,7 +1,5 @@
 package oxley.dave.fun.sport.stepcounter.parts;
 
-import static org.eclipse.swt.events.SelectionListener.widgetSelectedAdapter;
-
 import javax.annotation.PostConstruct;
 
 import org.eclipse.swt.SWT;
@@ -21,7 +19,7 @@ public class ReviewEntriesPart {
 	public void createComposite(Composite parent) {
 		parent.setLayout(new GridLayout(1, false));
 		DateTime calendar = new DateTime(parent, SWT.CALENDAR);
-		calendar.addSelectionListener(widgetSelectedAdapter(e -> System.out.println("calendar date changed")));
+		//calendar.addSelectionListener(widgetSelectedAdapter(e -> System.out.println("calendar date changed")));
 		
 		calendar.setBackground(Display.getDefault().getSystemColor(SWT.COLOR_BLUE));
 		

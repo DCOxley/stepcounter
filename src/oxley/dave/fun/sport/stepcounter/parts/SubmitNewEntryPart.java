@@ -9,7 +9,6 @@ import javax.inject.Inject;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.di.Persist;
 import org.eclipse.e4.ui.model.application.ui.MDirtyable;
-import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -18,7 +17,6 @@ import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Text;
-import static org.eclipse.swt.events.SelectionListener.*;
 
 public class SubmitNewEntryPart {
 
@@ -33,8 +31,8 @@ public class SubmitNewEntryPart {
 		parent.setLayout(new GridLayout(1, false));
 
 		DateTime calendarDropDown = new DateTime(parent, SWT.DROP_DOWN);
-		 calendarDropDown.addSelectionListener (
-		 widgetSelectedAdapter(e -> System.out.println ("calendar date changed via drop-down")));
+		 //calendarDropDown.addSelectionListener (
+		// widgetSelectedAdapter(e -> System.out.println ("calendar date changed via drop-down")));
 		 
 		txtInput = new Text(parent, SWT.SINGLE);
 		submitButton = new Button(parent, SWT.PUSH);
