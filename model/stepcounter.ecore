@@ -4,6 +4,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Day" eSuperTypes="#//Period">
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Target"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="result" eType="#//Result"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="#//Date"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="Date" instanceClassName="java.util.Date"/>
   <eClassifiers xsi:type="ecore:EClass" name="Cycle" eSuperTypes="#//Period">

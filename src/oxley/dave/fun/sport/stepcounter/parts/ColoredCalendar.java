@@ -112,9 +112,9 @@ SimpleDateFormat("yyyy-MM");//format date
         int startday = 1;
         for (int i = 0; i < 42; i++) {
             Color temp = days[i].getBackground();
-            if (temp.equals(display.getSystemColor(SWT.COLOR_BLUE))) {
+            if (temp.equals(display.getSystemColor(SWT.COLOR_WHITE))) {
                 
-days[i].setBackground(display.getSystemColor(SWT.COLOR_WHITE));
+days[i].setBackground(display.getSystemColor(SWT.COLOR_BLACK));
             }
         }
         for (int i = 0; i < 42; i++) {
@@ -122,7 +122,7 @@ days[i].setBackground(display.getSystemColor(SWT.COLOR_WHITE));
                 days[i].setText("" + startday);
                 if (startday == currentDay) {
                     
-days[i].setBackground(display.getSystemColor(SWT.COLOR_BLUE)); //
+days[i].setBackground(display.getSystemColor(SWT.COLOR_WHITE)); //
                 }
                 startday++;
             } else {

@@ -15,6 +15,10 @@
       <product
             application="org.eclipse.e4.ui.workbench.swt.E4Application"
             name="oxley.dave.fun.sport.stepcounter">
+         <property
+               name="appName"
+               value="oxley.dave.fun.sport.stepcounter">
+         </property>
       </product>
    </extension>
 

@@ -21,10 +21,10 @@ public class ReviewEntriesPart {
 		DateTime calendar = new DateTime(parent, SWT.CALENDAR);
 		//calendar.addSelectionListener(widgetSelectedAdapter(e -> System.out.println("calendar date changed")));
 		
-		calendar.setBackground(Display.getDefault().getSystemColor(SWT.COLOR_BLUE));
+		calendar.setBackground(Display.getDefault().getSystemColor(SWT.COLOR_WHITE));
 		
         ColoredCalendar cd = new ColoredCalendar(parent);
-        cd.open(parent);
+        //cd.open(parent);
 	}
 
 }

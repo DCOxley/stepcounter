@@ -202,6 +202,15 @@ public class StepcounterPackageImpl extends EPackageImpl implements StepcounterP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDay_Date() {
+		return (EAttribute)dayEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCycle() {
 		return cycleEClass;
 	}
@@ -345,6 +354,7 @@ public class StepcounterPackageImpl extends EPackageImpl implements StepcounterP
 		dayEClass = createEClass(DAY);
 		createEReference(dayEClass, DAY__TARGET);
 		createEReference(dayEClass, DAY__RESULT);
+		createEAttribute(dayEClass, DAY__DATE);
 
 		cycleEClass = createEClass(CYCLE);
 		createEReference(cycleEClass, CYCLE__DAYS);
@@ -408,6 +418,7 @@ public class StepcounterPackageImpl extends EPackageImpl implements StepcounterP
 		initEClass(dayEClass, Day.class, "Day", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDay_Target(), this.getTarget(), null, "target", null, 0, 1, Day.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDay_Result(), this.getResult(), null, "result", null, 0, 1, Day.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDay_Date(), this.getDate(), "date", null, 0, 1, Day.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cycleEClass, Cycle.class, "Cycle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCycle_Days(), this.getDay(), null, "days", null, 0, -1, Cycle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

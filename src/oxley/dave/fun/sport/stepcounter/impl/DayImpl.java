@@ -2,6 +2,7 @@
  */
 package oxley.dave.fun.sport.stepcounter.impl;
 
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
@@ -23,6 +24,7 @@ import oxley.dave.fun.sport.stepcounter.api.Target;
  * <ul>
  *   <li>{@link oxley.dave.fun.sport.stepcounter.impl.DayImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link oxley.dave.fun.sport.stepcounter.impl.DayImpl#getResult <em>Result</em>}</li>
+ *   <li>{@link oxley.dave.fun.sport.stepcounter.impl.DayImpl#getDate <em>Date</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,6 +48,25 @@ public class DayImpl extends PeriodImpl implements Day {
 	 * @ordered
 	 */
 	protected Result result;
+
+	/**
+	 * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date DATE_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date date = DATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -147,6 +168,27 @@ public class DayImpl extends PeriodImpl implements Day {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Date getDate() {
+		return date;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDate(Date newDate) {
+		Date oldDate = date;
+		date = newDate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StepcounterPackage.DAY__DATE, oldDate, date));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -156,6 +198,8 @@ public class DayImpl extends PeriodImpl implements Day {
 			case StepcounterPackage.DAY__RESULT:
 				if (resolve) return getResult();
 				return basicGetResult();
+			case StepcounterPackage.DAY__DATE:
+				return getDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -173,6 +217,9 @@ public class DayImpl extends PeriodImpl implements Day {
 				return;
 			case StepcounterPackage.DAY__RESULT:
 				setResult((Result)newValue);
+				return;
+			case StepcounterPackage.DAY__DATE:
+				setDate((Date)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,6 +239,9 @@ public class DayImpl extends PeriodImpl implements Day {
 			case StepcounterPackage.DAY__RESULT:
 				setResult((Result)null);
 				return;
+			case StepcounterPackage.DAY__DATE:
+				setDate(DATE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -208,8 +258,26 @@ public class DayImpl extends PeriodImpl implements Day {
 				return target != null;
 			case StepcounterPackage.DAY__RESULT:
 				return result != null;
+			case StepcounterPackage.DAY__DATE:
+				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (date: ");
+		result.append(date);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DayImpl
